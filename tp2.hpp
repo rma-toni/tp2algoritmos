@@ -35,3 +35,38 @@ void ejercicio2(int n){
         for (int i = 0; i < n; i++) if(array1[i] >= 0) std::cout << array1[i] << " ";
     }
 }
+
+//---------------------------------------------------------EJERCICIO 3-------------------------------------------------------
+
+/*Ingresar un valor entero N (<20). A continuacion un conjunto VEC de N componentes. A partir de este conjunto gerar otro FACT en el que cada 
+elemento sea el factorial del elemento homologo de VEC. Finalmente imprimir ambos vectoras a razon de un valor de cada uno por renglon
+NOTA: EL PROGRAMA PRINCIPAL SOLO PUEDE TENER 6 INSTRUCCIONES*/
+
+//--FUNCION AUXILIAR: Tomar en cuenta las limitacion para almacenar valor de un entero al momento de calcular el factorial de un numero mayor a 12
+int factorial(int n){
+   int f = 1;
+   for (int i = 1; i <= n; i++)
+   {
+        f = f * i;
+   }   
+   return f;
+}
+
+void ejercicio3(int n){
+    int VEC[n];
+    int FACT[n];
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Ingrese el valor numero " << i+1 << ": ";
+        std::cin >> VEC[i];
+        FACT[i] = factorial(VEC[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << VEC[i] << std::endl;
+        std::cout << FACT[i] << std::endl;
+    }
+}
+
+//---------------------------------------------------------EJERCICIO 4-------------------------------------------------------
