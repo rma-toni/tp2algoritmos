@@ -135,7 +135,29 @@ int main(int argc, char const *argv[])
 
     //----------------------------------------------EJERCICIO 11----------------------------------------------
 
+    //TODO: Comprobar que los valores ingresados sean validos
 
-    
-    return 0;    
+    /*int n1,n2;
+    cout << "Ingrese el valor M menor a 25: ";
+    cin >> n1;
+    cout << "Ingrese el valor N menor a 10: ";
+    cin >> n2;
+    ejercicio11(n1,n2);*/
+
+    //----------------------------------------------EJERCICIO 12----------------------------------------------
+
+    //TODO: Comprobar que los valores ingresados sean validos
+
+    /*int n12;
+    cout << "Ingrese un valor menor a 40: ";
+    cin >> n12;
+    ejercicio12(n12);*/   
+
+    //----------------------------------------------EJERCICIO 13----------------------------------------------
+
+    int n13;
+    cout << "Ingrese un valor menor a 50: ";
+    cin >> n13;
+    ejercicio13(n13);
+    return 0;
 }

@@ -360,8 +360,40 @@ void ejercicio10(int M, int N){
 /*Ingresar dos valores enteros M(<25) y N(<10). A continuacion ingresar un conjunto A de M elementos y luego otro B de N elementos, ambos ordenados en forma
 creciente por magnitud. Generar e imprimir el conjunto TOTAL resultante del apareo por magnitud de los conjuntos A y B*/
 
-void ejercicio11(){
+//NOTA: Recordar que esta funcion solo funciona si los conjuntos que se ingresan ya estan ordenados.
 
+void ejercicio11(int M, int N){
+    int largoTOTAL = M+N;
+    int A[M], B[N], TOTAL[largoTOTAL];
+    int indexA = 0;
+    int indexB = 0;
+    for (int i = 0; i < M; i++)
+    {
+        std::cout << "CONJUNTO A: Ingrese el elemento " << i+1 << ": ";
+        std::cin >> A[i];
+    }
+    for (int i = 0; i < N; i++){
+        std::cout << "CONJUNTO B: Ingrese el elemento " << i+1 << ": ";
+        std::cin >> B[i];
+    }
+    for (int i = 0; i < largoTOTAL; i++)
+    {
+        if(A[indexA] < B[indexB]){
+            TOTAL[i] = A[indexA];
+            indexA++;
+        }else if(A[indexA] > B[indexB]){
+            TOTAL[i] = B[indexB];
+            indexB++;
+        }else{
+            TOTAL[i] = A[indexA];
+            indexA++;
+        }
+    }
+    //imprimir
+    for (int i = 0; i < largoTOTAL; i++)
+    {
+        std::cout << TOTAL[i] << std::endl;
+    }
 }
 
 //---------------------------------------------------------EJERCICIO 12-------------------------------------------------------
@@ -372,8 +404,27 @@ a) Con cual elemento (posicion) del conjunto coincide, o
 b) Entre cuales dos elementos (posiciones) se encuentro, o
 c) Si es menor que el primero o mayor que el ultimo*/
 
-void ejercicio12(){
+void ejercicio12(int n){
+    float x;
+    float REFER[n];
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Ingrese el valor numero " << i+1 << ": ";
+        std::cin >> REFER[i];
+    }
+    
+    //INGRESA EL VALOR X
+    std::cout << "Ingresa el valor que desea ubicar: ";
+    std::cin >> x;
 
+    //Verificamos si coincide con algun valor:
+    if(x < REFER[0]) std::cout << "El valor x es menor que el primer elemento" << std::endl;
+    if(x > REFER[n-1]) std::cout << "El valor x es mayor que el ultimo elemento" << std::endl;
+    for (int i = 0; i < n; i++)
+    {
+        if(x == REFER[i]) std::cout << "El numero x coincide con el elemento numero " << i << std::endl;
+        if(x > REFER[i] && x < REFER[i+1]) std::cout << "El numero x es mayor que el elemento " << i << " y el elemento " << (i+1) << std::endl;
+    }         
 }
 
 //---------------------------------------------------------EJERCICIO 13-------------------------------------------------------
@@ -382,6 +433,30 @@ void ejercicio12(){
 a)El conjunto SINOR en el que cada elemento original se intercambie por su simetrico: A[1] con A[CANT], A[2] con A[CANT-1], ..... etc.
 b)El conjunto SINOR ordenado de menor a mayor sobre si mismo indicando la posicion que ocupaba cada elmento en el conjunto original.*/
 
-void ejercicio13(){
+void ejercicio13(int n){
+    int SINOR[n];
+    int aux1[n], aux2[n];
+    int max = 0;
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Ingrese el elemento numero " << i+1 << ": ";
+        std::cin >> SINOR[i];
+    }
+    //Como nos pide imprimir el conjunto SINOR y no otro vamos a valernos de un conjunto auxiliar para intecambiar los valores
+    //A INVERTIR
+    for (int i = 0; i < n; i++)
+    {
+        aux1[i] = SINOR[(n-i)-1];
+    }
+    std::cout << "Conjunto invertido: " << std::endl; 
+    for (int i = 0; i < n; i++) {
+        SINOR[i] = aux1[i];
+        std::cout << SINOR[i] << std::endl;
+    }
+    //B ORDENAR DE MENOR A MAYOR, implementamos bubble sort
+    for (int i = 0; i < n; i++)
+    {
 
+    }
+    
 }
