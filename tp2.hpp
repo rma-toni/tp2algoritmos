@@ -130,7 +130,7 @@ void ejercicio5(int n){
 la posicion del mismo dentro del conjunto. Si el maximo no es unico, imprimir todas las posiciones en que se encuentra.*/
 
 //Recorre VALOR dos veces
-void ejercicio6v1(int n){
+void ejercicio6v1(int n){ //V1 sin errores
     int VALOR[n];
     int max = 0; //variable que almacena el valor maximo;
     int maxIndex;
@@ -143,18 +143,18 @@ void ejercicio6v1(int n){
     //Ahora recorremos VALOR por primero vez para ver cual es el valor maximo
     for (int i = 0; i < n; i++)
     {
-        if(VALOR[n] > max){
-            max = VALOR[n];
+        if(VALOR[i] > max){
+            max = VALOR[i];
             maxIndex = i;   
         }
     }
-    std::cout << "El valor maximo es " << max << " y se encuentra en la posicion " << maxIndex << std::endl;
+    std::cout << "El valor maximo es " << max << " y se encuentra en la posicion " << maxIndex;
     //Ahora recorremos recorremos VALOR por segundo vez para ver si el valor maximo no es unico
-    for (int i = 0; i < n; i++)
+    for (int i = maxIndex+1; i < n; i++)
     {
-        if(VALOR[n] == max)
+        if(VALOR[i] == max)
         {
-            std::cout << "Otro valor igual se encuentra en la posicion: " << i;
+            std::cout << "\nOtro valor igual se encuentra en la posicion: " << i;
         }      
     }
     
@@ -165,7 +165,7 @@ void ejercicio6v1(int n){
 void ejercicio6v2(int n){
     int VALOR[n];
     int max = 0; //variable que almacena el valor maximo;
-    int counter = 0;
+    int counter; //contara cuandos max hay
     int maxIndex[n]; //este Vector almacenara todos los lugares en los que se encuentra la posicion maxima;
     for (int i = 0; i < n; i++)
     {
@@ -176,11 +176,23 @@ void ejercicio6v2(int n){
     //TODO: Hacemos todo lo que hicimos en la funcion anterior de una sola vez 
     for (int i = 0; i < n; i++)
     {
-        if(VALOR[n] > max){
-            max = VALOR[n];
-            maxIndex[counter] = i;   
+        if(VALOR[i] > max){
+            max = VALOR[i];
+            counter = 1;
+            maxIndex[counter-1] = i;
+        }else if(VALOR[i] == max){
+            counter++;
+            maxIndex[counter-1] = i;
         }
     }
+
+    //Imprimimos los datos obtenidos.
+    std::cout << "El valor maximo es " << max << " y se encuentra en las siguientes posiciones: "; 
+    for (int i = 0; i < counter; i++)
+    {
+        std::cout << "  " << maxIndex[i];
+    }
+    
 }
 
 //---------------------------------------------------------EJERCICIO 7-------------------------------------------------------

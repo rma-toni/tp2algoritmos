@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
     cin >> n4;
     while (n4>=25 || n4<1)
     {
-        cout << "El numero ingresado es igual o mayor a 25, por favor ingrese uno menor: ";
+        cout << "El numero ingresado es invalido, por favor ingrese uno menor a 25 y mayor que 0: ";
         cin >> n4;
     }
 
@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
     cin >> n5;
     while (n5>=30 || n5<1)
     {
-        cout << "El numero ingresado es igual o mayor a 25, por favor ingrese uno menor: ";
+        cout << "El numero ingresado es invalido, por favor ingrese uno menor a 30 y mayor que 0: ";
         cin >> n5;
     }
 
@@ -72,14 +72,14 @@ int main(int argc, char const *argv[])
     //----------------------------------------------EJERCICIO 6----------------------------------------------
 
     int n6;
-    cout << "Ingrese un numero menor a 30: ";
+    cout << "Ingrese un numero menor a 40: ";
     cin >> n6;
     while (n6>=40 || n6<1)
     {
-        cout << "El numero ingresado es igual o mayor a 40, por favor ingrese uno menor: ";
+        cout << "El numero ingresado es invalido, por favor ingrese uno menor a 40 y mayor que 0: ";
         cin >> n6;
     }
-    ejercicio6v1(n6);
+    ejercicio6v2(n6);
 
     return 0;
 }
