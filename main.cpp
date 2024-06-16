@@ -1,3 +1,6 @@
+//TODO: Agregar aclaracion sobre las posiciones.
+//TODO: Ejercicio 7 sin finalizar
+
 #include <iostream>
 #include "tp2.hpp"
 
@@ -71,7 +74,7 @@ int main(int argc, char const *argv[])
 
     //----------------------------------------------EJERCICIO 6----------------------------------------------
 
-    int n6;
+    /*int n6;
     cout << "Ingrese un numero menor a 40: ";
     cin >> n6;
     while (n6>=40 || n6<1)
@@ -81,5 +84,43 @@ int main(int argc, char const *argv[])
     }
     ejercicio6v2(n6);
 
-    return 0;
+    return 0;*/
+
+    //----------------------------------------------EJERCICIO 7----------------------------------------------
+
+    /*int n7;
+    cout << "Ingrese un numero menor a 15: ";
+    cin >> n7;
+    while (n7>=15 || n7<1)
+    {
+        cout << "El numero ingresado es invalido, por favor ingrese uno menor a 15 y mayor que 0: ";
+        cin >> n7;
+    }
+    ejercicio7(n7);*/
+
+    //----------------------------------------------EJERCICIO 8----------------------------------------------
+
+    /*int n8;
+    cout << "Ingrese un numero menor a 25: ";
+    cin >> n8;
+    while (n8>=25 || n8<1)
+    {
+        cout << "El numero ingresado es invalido, por favor ingrese uno menor a 25 y mayor que 0: ";
+        cin >> n8;
+    }
+    ejercicio8(n8);*/
+
+    //----------------------------------------------EJERCICIO 9----------------------------------------------
+
+    int n9;
+    cout << "Ingrese un numero menor a 40: ";
+    cin >> n9;
+    while (n9>=40 || n9<1)
+    {
+        cout << "El numero ingresado es invalido, por favor ingrese uno menor a 40 y mayor que 0: ";
+        cin >> n9;
+    }
+    ejercicio9(n9);
+
+    return 0;    
 }
