@@ -112,7 +112,7 @@ int main(int argc, char const *argv[])
 
     //----------------------------------------------EJERCICIO 9----------------------------------------------
 
-    int n9;
+    /*int n9;
     cout << "Ingrese un numero menor a 40: ";
     cin >> n9;
     while (n9>=40 || n9<1)
@@ -120,7 +120,22 @@ int main(int argc, char const *argv[])
         cout << "El numero ingresado es invalido, por favor ingrese uno menor a 40 y mayor que 0: ";
         cin >> n9;
     }
-    ejercicio9(n9);
+    ejercicio9(n9);*/
 
+    //----------------------------------------------EJERCICIO 10----------------------------------------------
+
+    //TODO: Comprobar que los valores ingresados sean validos
+
+    /*int n1,n2;
+    cout << "Ingrese el valor M menor a 10: ";
+    cin >> n1;
+    cout << "Ingrese el valor N menor a 15: ";
+    cin >> n2;
+    ejercicio10(n1,n2);*/
+
+    //----------------------------------------------EJERCICIO 11----------------------------------------------
+
+
+    
     return 0;    
 }

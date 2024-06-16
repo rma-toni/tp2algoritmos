@@ -294,18 +294,19 @@ void ejercicio9(int n){
     //Rellenamos los conjuntos A y B
     for (int i = 0; i < n; i++)
     {
-        std::cout << "CONJUNTO A: Ingrese el elemento numero " << i+1;
+        std::cout << "CONJUNTO A: Ingrese el elemento numero " << i+1 << ": ";
         std::cin >> A[i];
     }
     for (int i = 0; i < n; i++)
     {
-        std::cout << "CONJUNTO B: Ingrese el elemento numero " << i+1;
+        std::cout << "CONJUNTO B: Ingrese el elemento numero " << i+1 << ": ";
         std::cin >> B[i];
     }
-    //A continuacion calculamos los elementos del conjunto C
+    //A continuacion calculamos los elementos del conjunto C y se los imprime
     for (int i = 0; i < n; i++)
     {
-        C[i] = A[0] + B[(n-1)-i]
+        C[i] = A[i] + B[(n-1)-i];
+        std::cout << C[i] << std::endl;
     }
 }
 
@@ -315,8 +316,43 @@ void ejercicio9(int n){
 a) Un conjunto C resultante de la anexion de A y B.
 b) Un conjunto D resultante de la anexion de los elementos distintos de cero de A y B.*/
 
-void ejercicio10(){
+void ejercicio10(int M, int N){
+    int largoC = M + N;
+    int counter1 = 0;
+    int counter2 = 0;
+    int A[M], B[N], C[largoC]; //aun no conocemos la cantidad de elementos que tendra el conjunto D
+    //Ingresar los valores de los conjuntos
+    for (int i = 0; i < M; i++)
+    {
+        std::cout << "CONJUNTO A: Ingrese el elemento " << i+1 << ": ";
+        std::cin >> A[i];
+        if(A[i] != 0) counter1++;
+    }
+    for (int i = 0; i < N; i++){
+        std::cout << "CONJUNTO B: Ingrese el elemento " << i+1 << ": ";
+        std::cin >> B[i];
+        if(B[i] != 0) counter1++;
+    }
 
+    //LLenamos el conjunto C.
+    for (int i = 0; i < largoC; i++)
+    {
+        if (i < (largoC - N)) C[i] = A[i];
+        if (i >= (largoC -N)) C[i] = B[i - M];
+        std::cout << C[i] << std::endl;
+    }
+    
+    //LLenamos el conjunto D.
+    int D[counter1];
+    counter1 = 0;
+    for (int i = 0; i < largoC; i++)
+    {
+        if(C[i] != 0){
+            D[counter1] = C[i];
+            std::cout << D[counter1] << std::endl;
+            counter1++;
+        }
+    }
 }
 
 //---------------------------------------------------------EJERCICIO 11-------------------------------------------------------
