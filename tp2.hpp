@@ -64,9 +64,62 @@ void ejercicio3(int n){
 
     for (int i = 0; i < n; i++)
     {
-        std::cout << VEC[i] << std::endl;
-        std::cout << FACT[i] << std::endl;
+        std::cout << VEC[i] << FACT[i] << std::endl;
     }
 }
 
 //---------------------------------------------------------EJERCICIO 4-------------------------------------------------------
+
+/*Ingresar un valor entero N (<25). A continuacion ingresar un conjunto VEC de N componentes. Si la suma de las componentes resulta mayor
+que cero imprimir las de indice par, sino las de infice impar*/
+
+void ejercicio4(int n){
+    int VEC[n];
+    int total = 0;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Ingrese el valor numero " << i+1 << ": ";
+        std::cin >> VEC[i];
+        total += VEC[i];
+    }
+    
+    if (total > 0) {
+        for (int i = 0; i < n; i+=2) std::cout << VEC[i] << std::endl;
+    } else if(total < 0){
+        for (int i = 1; i < n; i+=2) std::cout << VEC[i] << std::endl;
+    }
+}
+
+//---------------------------------------------------------EJERCICIO 5-------------------------------------------------------
+
+/*Ingresar un valor entero N(<30). A continuacion ingresar un conjunto UNO y luego otro conjunto DOS, ambos de N componentes.
+Generar e imprimir otro conjunto TRES intercalando los valores de posicion par de UNO e IMPAR de DOS
+Diseñar un procedimiento que rellene un arreglo en posiciones salteadas con las componentes de otro y usarlo para cada conjunto*/
+
+void ejercicio5(int n){
+    int UNO[n];
+    int DOS[n];
+    int TRES[n];
+
+    //Rellenamos el conjunto 1
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "CONJUNTO UNO: Ingrese el valor numero " << i+1 << ": ";
+        std::cin >> UNO[i];
+    }
+    //Rellenamos el conjunto 2
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "CONJUNTO DOS: Ingrese el valor numero " << i+1 << ": ";
+        std::cin >> DOS[i];
+    }
+    //Rellenamos le conjunto 3
+    for (int i = 0; i < n; i++)
+    {
+        if(i%2 == 0){
+            TRES[i] = UNO[i];
+        }else{
+            TRES[i] = DOS[i];
+        }
+        std::cout << TRES[i];
+    }
+}
