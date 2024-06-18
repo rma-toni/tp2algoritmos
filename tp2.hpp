@@ -157,8 +157,6 @@ void ejercicio6v1(int n){ //V1 sin errores
             std::cout << "\nOtro valor igual se encuentra en la posicion: " << i;
         }      
     }
-    
-    
 }
 
 //Recorre VALOR una vez
@@ -205,31 +203,34 @@ donde el primer elemento sea el mayor valor de DATO y el segundo el siguiente ma
 void ejercicio7(int n){
     int DATO[n];
     int MEJORDATO[2];
-    int max = 0, max2 = 0;
     for (int i = 0; i < n; i++)
     {
         std::cout << "Ingrese el valor numero " << i+1 << ": ";
         std::cin >> DATO[i];
     }
-    //averiguamos el valor maximo
-    for (int i = 0; i < n; i++)
-    {
-        if(DATO[i] > max){
-            max = DATO[i];
+
+    //La forma que vamos a seguir es ordenar el conjunto DATO para luego asignar a MEJORDATO los ultimos dos valores
+    int temp; //esta variable nos permitira almacenar el valor que vamos a intercambiar en el array
+    for (int i = 0; i < n-1; i++){
+        for (int j = 0; j < n-1; j++){
+            if(DATO[j]>DATO[j+1]){
+                temp=DATO[j];
+                DATO[j]=DATO[j+1];
+                DATO[j+1]=temp;
+            }
         }
     }
-    MEJORDATO[0] = max; //lo asignamos al primer valor de MEJORDATO
 
-
-    //TODO: Buscar y asignar segundo valor.
     for (int i = 0; i < n; i++)
     {
-        if(DATO[i] > max)
-        {
-            /* code */
-        } 
+        std::cout << DATO[i] << std::endl;
     }
     
+
+    MEJORDATO[0] = DATO[n-1];
+    MEJORDATO[1] = DATO[n-2];
+    std::cout << "MEJORDATO: " << std::endl;
+    for(int i = 0; i < 2; i++) std::cout << MEJORDATO[i] << std::endl;
 }
 
 //---------------------------------------------------------EJERCICIO 8-------------------------------------------------------
@@ -436,27 +437,45 @@ b)El conjunto SINOR ordenado de menor a mayor sobre si mismo indicando la posici
 void ejercicio13(int n){
     int SINOR[n];
     int aux1[n], aux2[n];
-    int max = 0;
+    int max = 0, control;
     for (int i = 0; i < n; i++)
     {
         std::cout << "Ingrese el elemento numero " << i+1 << ": ";
         std::cin >> SINOR[i];
     }
-    //Como nos pide imprimir el conjunto SINOR y no otro vamos a valernos de un conjunto auxiliar para intecambiar los valores
-    //A INVERTIR
-    for (int i = 0; i < n; i++)
-    {
-        aux1[i] = SINOR[(n-i)-1];
-    }
-    std::cout << "Conjunto invertido: " << std::endl; 
-    for (int i = 0; i < n; i++) {
-        SINOR[i] = aux1[i];
-        std::cout << SINOR[i] << std::endl;
-    }
-    //B ORDENAR DE MENOR A MAYOR, implementamos bubble sort
-    for (int i = 0; i < n; i++)
-    {
 
+    std::cout << "Desea invertir(1) o ordenar(2) este elemento: ";
+    std::cin >> control;
+
+    switch (control)
+    {
+    case 1:    //A INVERTIR
+        for (int i = 0; i < n; i++)
+        {
+            aux1[i] = SINOR[(n-i)-1];
+        }
+        std::cout << "Conjunto invertido: " << std::endl; 
+        for (int i = 0; i < n; i++) {
+            SINOR[i] = aux1[i];
+            std::cout << SINOR[i] << std::endl;
+        }
+        break;
+    case 2:
+        int temp; //esta variable nos permitira almacenar el valor que vamos a intercambiar en el array
+        for (int i = 0; i < n-1; i++)
+        {
+            for (int i = 0; i < n-1; i++){
+                if(SINOR[i]>SINOR[i+1]){
+                    temp=SINOR[i];
+                    SINOR[i]=SINOR[i+1];
+                    SINOR[i+1]=temp;
+                }
+            }
+        }
+        for (int i = 0; i < n; i++)
+        {
+            std::cout << SINOR[i] << std::endl;
+        }
+        break;
     }
-    
 }
