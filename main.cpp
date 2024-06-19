@@ -143,7 +143,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-//---------------------------------------------------------EJERCICIO 1--------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 1--------------------------------------------------------  LISTO
 
 void ejercicio1(int n){
     int paresNaturales[n];
@@ -153,14 +153,14 @@ void ejercicio1(int n){
     }    
 }
 
-//---------------------------------------------------------EJERCICIO 2--------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 2--------------------------------------------------------  LISTO
 
 void ejercicio2(int n){
     int array1[n];
     //Se procede al ingreso de valores por consola
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el elemento numero " << i+1 << ": ";
+        cout << "Ingrese el elemento numero " << i << ": ";
         cin >> array1[i];
     }
     //Si es menor a 10 se imprime negativos
@@ -172,7 +172,7 @@ void ejercicio2(int n){
     }
 }
 
-//---------------------------------------------------------EJERCICIO 3-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 3-------------------------------------------------------   LISTO
 
 //--FUNCION AUXILIAR: Tomar en cuenta las limitacion para almacenar el valor de un entero al momento de calcular el factorial de un numero mayor a 12
 int factorial(int n){
@@ -187,20 +187,20 @@ int factorial(int n){
 void ejercicio3(int n){
     int VEC[n],FACT[n];
     for (int i = 0; i < n; i++){
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> VEC[i];
         FACT[i] = factorial(VEC[i]);
     }
     for (int i = 0; i < n; i++) cout << VEC[i] << FACT[i] << endl;
 }
 
-//---------------------------------------------------------EJERCICIO 4-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 4-------------------------------------------------------  LISTO
 
 void ejercicio4(int n){
     int VEC[n];
     int total = 0;
     for (int i = 0; i < n; i++) {
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> VEC[i];
         total += VEC[i];
     }
@@ -212,8 +212,7 @@ void ejercicio4(int n){
     }
 }
 
-//---------------------------------------------------------EJERCICIO 5-------------------------------------------------------
-
+//---------------------------------------------------------EJERCICIO 5-------------------------------------------------------  LISTO
 void ejercicio5(int n){
     int UNO[n];
     int DOS[n];
@@ -222,13 +221,13 @@ void ejercicio5(int n){
     //Rellenamos el conjunto 1
     for (int i = 0; i < n; i++)
     {
-        cout << "CONJUNTO UNO: Ingrese el valor numero " << i+1 << ": ";
+        cout << "CONJUNTO UNO: Ingrese el valor numero " << i << ": ";
         cin >> UNO[i];
     }
     //Rellenamos el conjunto 2
     for (int i = 0; i < n; i++)
     {
-        cout << "CONJUNTO DOS: Ingrese el valor numero " << i+1 << ": ";
+        cout << "CONJUNTO DOS: Ingrese el valor numero " << i << ": ";
         cin >> DOS[i];
     }
     //Rellenamos le conjunto 3
@@ -239,20 +238,20 @@ void ejercicio5(int n){
         }else{
             TRES[i] = DOS[i];
         }
-        cout << TRES[i];
+        cout << TRES[i] << endl;
     }
 }
 
-//---------------------------------------------------------EJERCICIO 6-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 6-------------------------------------------------------  LISTO
 
 //Recorre VALOR dos veces
-void ejercicio6v1(int n){ //V1 sin errores
+void ejercicio6v1(int n){ 
     int VALOR[n];
     int max = 0; //variable que almacena el valor maximo;
     int maxIndex;
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> VALOR[i];
     }
 
@@ -283,7 +282,7 @@ void ejercicio6v2(int n){
     int maxIndex[n]; //este Vector almacenara todos los lugares en los que se encuentra la posicion maxima;
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> VALOR[i];
     }
 
@@ -309,14 +308,14 @@ void ejercicio6v2(int n){
     
 }
 
-//---------------------------------------------------------EJERCICIO 7-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 7-------------------------------------------------------  LISTO
 
 void ejercicio7(int n){
     int DATO[n];
     int MEJORDATO[2];
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> DATO[i];
     }
 
@@ -344,7 +343,7 @@ void ejercicio7(int n){
     for(int i = 0; i < 2; i++) cout << MEJORDATO[i] << endl;
 }
 
-//---------------------------------------------------------EJERCICIO 8-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 8-------------------------------------------------------   LISTO
 
 void ejercicio8(int n){
     int GG[n];
@@ -353,7 +352,7 @@ void ejercicio8(int n){
 
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> GG[i];
     }
 
@@ -391,19 +390,19 @@ void ejercicio8(int n){
 }
 
 
-//---------------------------------------------------------EJERCICIO 9-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 9-------------------------------------------------------  
 
 void ejercicio9(int n){
     int A[n], B[n], C[n];
     //Rellenamos los conjuntos A y B
     for (int i = 0; i < n; i++)
     {
-        cout << "CONJUNTO A: Ingrese el elemento numero " << i+1 << ": ";
+        cout << "CONJUNTO A: Ingrese el elemento numero " << i << ": ";
         cin >> A[i];
     }
     for (int i = 0; i < n; i++)
     {
-        cout << "CONJUNTO B: Ingrese el elemento numero " << i+1 << ": ";
+        cout << "CONJUNTO B: Ingrese el elemento numero " << i << ": ";
         cin >> B[i];
     }
     //A continuacion calculamos los elementos del conjunto C y se los imprime
@@ -414,7 +413,7 @@ void ejercicio9(int n){
     }
 }
 
-//---------------------------------------------------------EJERCICIO 10-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 10-------------------------------------------------------   LISTO
 
 void ejercicio10(int M, int N){
     int largoC = M + N;
@@ -424,15 +423,17 @@ void ejercicio10(int M, int N){
     //Ingresar los valores de los conjuntos
     for (int i = 0; i < M; i++)
     {
-        cout << "CONJUNTO A: Ingrese el elemento " << i+1 << ": ";
+        cout << "CONJUNTO A: Ingrese el elemento " << i << ": ";
         cin >> A[i];
         if(A[i] != 0) counter1++;
     }
     for (int i = 0; i < N; i++){
-        cout << "CONJUNTO B: Ingrese el elemento " << i+1 << ": ";
+        cout << "CONJUNTO B: Ingrese el elemento " << i << ": ";
         cin >> B[i];
         if(B[i] != 0) counter1++;
     }
+
+    cout << "Conjunto C" << std::endl;
 
     //LLenamos el conjunto C.
     for (int i = 0; i < largoC; i++)
@@ -442,6 +443,8 @@ void ejercicio10(int M, int N){
         cout << C[i] << endl;
     }
     
+    cout << "Conjunto D" << std::endl;
+
     //LLenamos el conjunto D.
     int D[counter1];
     counter1 = 0;
@@ -455,7 +458,9 @@ void ejercicio10(int M, int N){
     }
 }
 
-//---------------------------------------------------------EJERCICIO 11-------------------------------------------------------
+//---------------------------------------------------------EJERCICIO 11-------------------------------------------------------   LISTO
+
+//Recordar que los velores se tienen que ingresar en orden creciente
 
 void ejercicio11(int M, int N){
     int largoTOTAL = M+N;
@@ -464,11 +469,11 @@ void ejercicio11(int M, int N){
     int indexB = 0;
     for (int i = 0; i < M; i++)
     {
-        cout << "CONJUNTO A: Ingrese el elemento " << i+1 << ": ";
+        cout << "CONJUNTO A: Ingrese el elemento " << i << ": ";
         cin >> A[i];
     }
     for (int i = 0; i < N; i++){
-        cout << "CONJUNTO B: Ingrese el elemento " << i+1 << ": ";
+        cout << "CONJUNTO B: Ingrese el elemento " << i << ": ";
         cin >> B[i];
     }
     for (int i = 0; i < largoTOTAL; i++)
@@ -491,18 +496,14 @@ void ejercicio11(int M, int N){
     }
 }
 
-//---------------------------------------------------------EJERCICIO 12-------------------------------------------------------
-un valor pesquisa X. Desarrollar el programa que determine e imprima:
-a) Con cual elemento (posicion) del conjunto coincide, o
-b) Entre cuales dos elementos (posiciones) se encuentro, o
-c) Si es menor que el primero o mayor que el ultimo*/
+//---------------------------------------------------------EJERCICIO 12-------------------------------------------------------  LISTO
 
 void ejercicio12(int n){
     float x;
     float REFER[n];
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el valor numero " << i+1 << ": ";
+        cout << "Ingrese el valor numero " << i << ": ";
         cin >> REFER[i];
     }
     
@@ -515,8 +516,8 @@ void ejercicio12(int n){
     if(x > REFER[n-1]) cout << "El valor x es mayor que el ultimo elemento" << endl;
     for (int i = 0; i < n; i++)
     {
-        if(x == REFER[i]) cout << "El numero x coincide con el elemento numero " << i << endl;
-        if(x > REFER[i] && x < REFER[i+1]) cout << "El numero x es mayor que el elemento " << i << " y el elemento " << (i+1) << endl;
+        if(x == REFER[i]) cout << "El numero x coincide con el elemento numero " << (i) << endl;
+        if(x > REFER[i] && x < REFER[i+1]) cout << "El numero x es mayor que el elemento " << i << " y menor que el elemento " << (i+1) << endl;
     }         
 }
 
@@ -528,7 +529,7 @@ void ejercicio13(int n){
     int max = 0, control;
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el elemento numero " << i+1 << ": ";
+        cout << "Ingrese el elemento numero " << i << ": ";
         cin >> SINOR[i];
     }
 
